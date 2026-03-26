@@ -14,7 +14,8 @@
 | 03/23/2026 | 0.00 | First draft and Project ideation | 김혜민 |
 | 03/26/2026 | 0.01 | Business Purpose Supplement | 김혜민 |
 | 03/26/2026 | 0.02 | Finalize Project Plan | 김혜민 |
-| 03/26/2026 | 0.03 | Update System Diagram | 김혜민 |
+| 03/27/2026 | 0.03 | Update System Diagram | 김혜민 |
+| 03/27/2026 | 0.04 | Correct typos | 김혜민 |
 
 ---
 
@@ -58,7 +59,7 @@
 
 ### 2.1 Term Descriptions
 - **YU Notice Curation System:** 본 프로젝트의 핵심 시스템으로, 공지 수집, AI 요약, 맞춤형 알림 기능을 제공한다.
-- **Student (User):** 서비스를 이용하는 학생으로, 키워드를 등록하고 요약된 알림을 수신한다.
+- **Student:** 서비스를 이용하는 학생으로, 키워드를 등록하고 요약된 알림을 수신한다.
 - **YU Website Server:** 영남대학교 공식 홈페이지 서버로, 시스템이 정보를 추출하는 원천 데이터 대상이다.
 
 ---
@@ -101,15 +102,15 @@
 
 본 시스템은 분산된 공지사항을 실시간으로 수집하고 요약하여 전달하는 과정에서 다음과 같은 기술적 문제들에 직면할 수 있으며, 이를 해결하는 것을 목적으로 한다. 
 
-### 1) Problem #1 Data Consistency (데이터 일관성 및 정제)
+### 1) Problem #1: Data Consistency (데이터 일관성 및 정제)
 - **문제:** 영남대 홈페이지의 각 게시판마다 HTML 태그 구조가 다르기 때문에, 크롤링 시 제목, 날짜, 본문 데이터를 일관되게 추출하기 어렵다.
 - **해결:** 게시판별 맞춤형 파싱 알고리즘을 적용하고, 데이터 전처리(Pre-processing) 단계를 거쳐 규격화된 데이터 프로토콜을 생성하여 관리한다.
 
-### 2) Problem #2 Real-time Data Processing (실시간 통신 및 처리)
+### 2) Problem #2: Real-time Data Processing (실시간 통신 및 처리)
 - **문제:** 다수의 사용자가 동시에 키워드 알림을 기다리는 상황에서, 서버가 수집-요약-발송 과정을 지연 없이 처리해야 하는 실시간성 확보가 필수적이다.
 - **해결:** 데이터 수집 및 AI 요약 처리를 독립적인 쓰레드(Thread)로 배정하여 병렬로 처리함으로써, 사용자에게 1:1로 실시간 알림을 보내는 것과 같은 신속성을 확보한다.
 
-### 3) Problem #3 Information Accuracy (요약 정보의 정확성)
+### 3) Problem #3: Information Accuracy (요약 정보의 정확성)
 - **문제:** LLM(대규모 언어 모델)이 본문을 요약하는 과정에서 날짜나 신청 링크 등 핵심 수치를 잘못 생성하는 환각(Hallucination) 현상이 발생할 수 있다.
 - **해결:** 요약본 하단에 항상 원본 게시글 링크(Original Link)를 강제로 포함하여 사용자가 최종적으로 팩트 체크를 할 수 있는 검증 체계를 마련한다.
 
