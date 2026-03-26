@@ -14,7 +14,7 @@
 | 03/23/2026 | 0.00 | First draft and Project ideation | 김혜민 |
 | 03/26/2026 | 0.01 | Business Purpose Supplement | 김혜민 |
 | 03/26/2026 | 0.02 | Finalize Project Plan | 김혜민 |
-
+| 03/26/2026 | 0.03 | Update System Diagram | 김혜민 |
 
 ---
 
@@ -54,7 +54,7 @@
 
 ## 2. System context diagram
 
-![System Context Diagram](system_context_diagram.png)
+![System Context Diagram](system_context_diagram_final.png)
 
 ### 2.1 Term Descriptions
 - **YU Notice Curation System:** 본 프로젝트의 핵심 시스템으로, 공지 수집, AI 요약, 맞춤형 알림 기능을 제공한다.
